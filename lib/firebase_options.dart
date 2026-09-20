@@ -50,19 +50,18 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDICria-brrI-Fip-kG1BJQB1ydplqDV1s',
-    appId: '1:925093500173:android:eafa8074eb4c81c7848c44',
-    messagingSenderId: '925093500173',
-    projectId: 'task-7-note-firebase-ferrer',
-    storageBucket: 'task-7-note-firebase-ferrer.firebasestorage.app',
+    apiKey: 'AIzaSyAp2I7bEC6-Wvbn-umTNa3ffNkCkUT38WY',
+    appId: '1:702481762089:android:ab3bb58d3b4843b9cad938',
+    messagingSenderId: '702481762089',
+    projectId: 'note-crud-ferrer',
+    storageBucket: 'note-crud-ferrer.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA8jmVf8wPr8LkFlzWT83Zo5RcUlE18QS8',
-    appId: '1:925093500173:ios:8de006e4cc4a4e35848c44',
-    messagingSenderId: '925093500173',
-    projectId: 'task-7-note-firebase-ferrer',
-    storageBucket: 'task-7-note-firebase-ferrer.firebasestorage.app',
-    iosBundleId: 'com.example.activity7NoteWithFirebaseFerrer',
+    apiKey: 'AIzaSyDETgkGyUzEVnFiTbYIxfkXTYGpLau3BQ8',
+    appId: '1:702481762089:ios:e1b73c1e3a409e10cad938',
+    messagingSenderId: '702481762089',
+    projectId: 'note-crud-ferrer',
+    storageBucket: 'note-crud-ferrer.firebasestorage.app',
+    iosBundleId: 'com.example.activity6FirebaseCrudFerrer',
   );
 }

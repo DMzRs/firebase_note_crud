@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.activity_7_note_with_firebase_ferrer"
+    namespace = "com.example.activity_6_firebase_crud_ferrer"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -19,7 +19,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.activity_7_note_with_firebase_ferrer"
+        applicationId = "com.example.activity_6_firebase_crud_ferrer"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
