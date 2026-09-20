@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "925093500173",
-    "project_id": "task-7-note-firebase-ferrer",
-    "storage_bucket": "task-7-note-firebase-ferrer.firebasestorage.app"
+    "project_number": "702481762089",
+    "project_id": "note-crud-ferrer",
+    "storage_bucket": "note-crud-ferrer.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:925093500173:android:eafa8074eb4c81c7848c44",
+        "mobilesdk_app_id": "1:702481762089:android:ab3bb58d3b4843b9cad938",
         "android_client_info": {
-          "package_name": "com.example.activity_7_note_with_firebase_ferrer"
+          "package_name": "com.example.activity_6_firebase_crud_ferrer"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDICria-brrI-Fip-kG1BJQB1ydplqDV1s"
+          "current_key": "AIzaSyAp2I7bEC6-Wvbn-umTNa3ffNkCkUT38WY"
         }
       ],
       "services": {

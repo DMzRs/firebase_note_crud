@@ -14,15 +14,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: const Text('Ferrer Task 7'),
+        title: const Text('Firebase | Ferrer Task 6'),
         centerTitle: true,
         backgroundColor: Colors.teal,
-      ), // AppBar
+      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.teal,
         child: const Icon(Icons.add, color: Colors.white),
         onPressed: () => openAddDialog(context),
-      ), // FloatingActionButton
+      ),
       body: StreamBuilder<QuerySnapshot>(
         stream: service.getItems(),
         builder: (context, snapshot) {
@@ -52,12 +52,12 @@ class HomePage extends StatelessWidget {
                     item['name'],
                     style: const TextStyle(
                         fontSize: 18, fontWeight: FontWeight.bold),
-                  ), // Text
+                  ),
                   subtitle: Text(
                     "Quantity ${item['quantity']}",
                     style: const TextStyle(
                         fontSize: 14, color: Colors.grey),
-                  ), // Text
+                  ),
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -66,22 +66,22 @@ class HomePage extends StatelessWidget {
                             color: Colors.orange),
                         onPressed: () =>
                             openEditDialog(context, item),
-                      ), // IconButton
+                      ),
                       IconButton(
                         icon: const Icon(Icons.delete,
                             color: Colors.red),
                         onPressed: () =>
                             _confirmDelete(context, item.id),
-                      ), // IconButton
+                      ),
                     ],
-                  ), // Row
-                ), // ListTile
-              ); // Card
+                  ),
+                ),
+              );
             },
-          ); // ListView.builder
+          );
         },
-      ), // StreamBuilder
-    ); // Scaffold
+      ),
+    );
   }
 
   //DELETE UI
@@ -100,9 +100,9 @@ class HomePage extends StatelessWidget {
               service.deleteItem(id);
               Navigator.pop(context);
             },
-          ), // TextButton
+          ),
         ],
-      ), // AlertDialog
+      ),
     );
   }
 
@@ -124,8 +124,8 @@ class HomePage extends StatelessWidget {
                 labelText: "Name",
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8)),
-              ), // InputDecoration
-            ), // TextField
+              ),
+            ),
             const SizedBox(height: 12),
             TextField(
               controller: qtyCtrl,
@@ -133,15 +133,15 @@ class HomePage extends StatelessWidget {
                 labelText: "Quantity",
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8)),
-              ), // InputDecoration
-            ), // TextField
+              ),
+            ),
           ],
-        ), // Column
+        ),
         actions: [
           TextButton(
             child: const Text('Cancel'),
             onPressed: () => Navigator.pop(context),
-          ), // TextButton
+          ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.teal,
@@ -157,9 +157,9 @@ class HomePage extends StatelessWidget {
                 Navigator.pop(context);
               }
             },
-          ), // ElevatedButton
+          ),
         ],
-      ), // AlertDialog
+      ),
     );
   }
 
@@ -181,8 +181,8 @@ class HomePage extends StatelessWidget {
                 labelText: "Name",
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8)),
-              ), // InputDecoration
-            ), // TextField
+              ),
+            ),
             const SizedBox(height: 12),
             TextField(
               controller: qtyCtrl,
@@ -190,15 +190,15 @@ class HomePage extends StatelessWidget {
                 labelText: "Quantity",
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8)),
-              ), // InputDecoration
-            ), // TextField
+              ),
+            ),
           ],
-        ), // Column
+        ),
         actions: [
           TextButton(
             child: const Text("Cancel"),
             onPressed: () => Navigator.pop(context),
-          ), // TextButton
+          ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.orange,
@@ -214,9 +214,9 @@ class HomePage extends StatelessWidget {
                 Navigator.pop(context);
               }
             },
-          ), // ElevatedButton
+          ),
         ],
-      ), // AlertDialog
+      ),
     );
   }
 }
