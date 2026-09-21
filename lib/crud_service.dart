@@ -15,7 +15,7 @@ class CrudService {
 
   final CloudinaryPublic _cloudinary = CloudinaryPublic(
     'j3lgaey6',
-    'flutter_notes_preset',
+    'flutter_note_preset',
     cache: false,
   );
 
