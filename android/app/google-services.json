@@ -12,7 +12,12 @@
           "package_name": "com.example.activity_6_firebase_crud_ferrer"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "702481762089-i1rg4s6h42uka96buceg8q4ns0ukptlh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAp2I7bEC6-Wvbn-umTNa3ffNkCkUT38WY"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702481762089-i1rg4s6h42uka96buceg8q4ns0ukptlh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "702481762089-u05ob1lfdlcutt75i52mee0cjibcfarb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.activity6FirebaseCrudFerrer"
+              }
+            }
+          ]
         }
       }
     }
