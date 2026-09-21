@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'auth_service.dart';
 import 'crud_service.dart';
+import 'login_page.dart';
 
 class HomePage extends StatelessWidget {
   final CrudService service = CrudService();
@@ -17,6 +19,18 @@ class HomePage extends StatelessWidget {
         title: const Text('Firebase | Ferrer Task 6'),
         centerTitle: true,
         backgroundColor: Colors.teal,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () {
+              AuthService().signOut();
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (_) => const LoginPage()),
+              );
+            },
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.teal,
