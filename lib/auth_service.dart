@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/foundation.dart' show debugPrint, kIsWeb;
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -35,7 +35,7 @@ class AuthService {
       );
       return userCredential.user;
     } catch (e) {
-      print("Registration error: $e");
+      debugPrint("Registration error: $e");
       return null;
     }
   }
@@ -49,7 +49,7 @@ class AuthService {
       );
       return userCredential.user;
     } catch (e) {
-      print("Login error: $e");
+      debugPrint("Login error: $e");
       return null;
     }
   }

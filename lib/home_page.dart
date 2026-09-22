@@ -223,6 +223,7 @@ class HomePage extends StatelessWidget {
               ),
               child: const Text("Save"),
               onPressed: () async {
+                final navigator = Navigator.of(context);
                 if (nameCtrl.text.isNotEmpty &&
                     qtyCtrl.text.isNotEmpty) {
                   await service.addItemWithImage(
@@ -230,7 +231,7 @@ class HomePage extends StatelessWidget {
                     int.parse(qtyCtrl.text),
                     selectedImageUrl,
                   );
-                  Navigator.pop(context);
+                  navigator.pop();
                 }
               },
             ),

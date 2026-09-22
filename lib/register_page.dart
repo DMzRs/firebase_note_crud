@@ -57,29 +57,31 @@ class _RegisterPageState extends State<RegisterPage> {
                   if (emailCtrl.text.isEmpty || passwordCtrl.text.isEmpty) {
                     return;
                   }
+                  final navigator = Navigator.of(context);
+                  final messenger = ScaffoldMessenger.of(context);
                   setState(() => loading = true);
                   final user = await auth.registerWithEmail(
                       emailCtrl.text, passwordCtrl.text);
+                  if (!mounted) return;
                   setState(() => loading = false);
 
-                  if (!mounted) return;
                   if (user != null) {
                     // Send verification email
                     if (!user.emailVerified) {
                       await user.sendEmailVerification();
+                      if (!mounted) return;
                     }
-                    ScaffoldMessenger.of(context).showSnackBar(
+                    messenger.showSnackBar(
                       const SnackBar(
                         content: Text(
                             "Verification email sent. Please check your inbox."),
                       ),
                     );
-                    Navigator.pushReplacement(
-                      context,
+                    navigator.pushReplacement(
                       MaterialPageRoute(builder: (_) => const LoginPage()),
                     );
                   } else {
-                    ScaffoldMessenger.of(context).showSnackBar(
+                    messenger.showSnackBar(
                       const SnackBar(content: Text("Registration failed")),
                     );
                   }

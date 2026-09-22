@@ -56,28 +56,29 @@ class _LoginPageState extends State<LoginPage> {
                     ? const CircularProgressIndicator(color: Colors.white)
                     : const Text("Login with Email"),
                 onPressed: () async {
+                  final navigator = Navigator.of(context);
+                  final messenger = ScaffoldMessenger.of(context);
                   setState(() => loading = true);
                   final user = await auth.signInWithEmail(
                       emailCtrl.text, passwordCtrl.text);
+                  if (!mounted) return;
                   setState(() => loading = false);
 
-                  if (!mounted) return;
                   if (user != null) {
                     if (!user.emailVerified) {
-                      ScaffoldMessenger.of(context).showSnackBar(
+                      messenger.showSnackBar(
                         const SnackBar(
                           content: Text(
                               "Please verify your email before logging in."),
                         ),
                       );
                     } else {
-                      Navigator.pushReplacement(
-                        context,
+                      navigator.pushReplacement(
                         MaterialPageRoute(builder: (_) => HomePage()),
                       );
                     }
                   } else {
-                    ScaffoldMessenger.of(context).showSnackBar(
+                    messenger.showSnackBar(
                       const SnackBar(
                           content: Text("Invalid email or password")),
                     );
@@ -102,14 +103,14 @@ class _LoginPageState extends State<LoginPage> {
                 icon: const Icon(Icons.login),
                 label: const Text("Sign in with Google"),
                 onPressed: () async {
+                  final navigator = Navigator.of(context);
                   setState(() => loading = true);
                   final user = await auth.signInWithGoogle();
+                  if (!mounted) return;
                   setState(() => loading = false);
 
-                  if (!mounted) return;
                   if (user != null) {
-                    Navigator.pushReplacement(
-                      context,
+                    navigator.pushReplacement(
                       MaterialPageRoute(builder: (_) => HomePage()),
                     );
                   }
